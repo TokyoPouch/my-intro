@@ -2,14 +2,13 @@
   Reset & Base Styles
 */
 :root {
-    /* Warm pastel color palette */
+    /* Minimalist, Clean, Sophisticated Palette */
     --bg-color: #FAFAFA;       
-    --bg-alt: #FFF5F0;         /* Very soft warm peach background */
-    --text-primary: #292524;   /* Sharp dark brown/slate */
-    --text-secondary: #57534E; /* Warm gray */
-    --accent: #F97316;         /* Sharp vivid orange for accents */
-    --accent-light: #FFEDD5;   /* Pastel orange background highlights */
-    --border-color: #E7E5E4;
+    --bg-alt: #F4F4f5;
+    --text-primary: #18181B;
+    --text-secondary: #52525B;
+    --accent: #52525B;
+    --border-color: #E4E4E7;
     
     /* Typography */
     --font-heading: 'Inter', 'Noto Sans JP', sans-serif;
@@ -28,20 +27,20 @@ body {
     background-color: var(--bg-color);
     line-height: 1.8;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4, strong {
     font-family: var(--font-heading);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.4;
     letter-spacing: 0.05em;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 5%;
 }
@@ -50,124 +49,55 @@ h1, h2, h3, h4, strong {
   Sections
 */
 .section {
-    padding: 140px 0;
+    padding: 120px 0;
+    position: relative;
 }
 
 .bg-alt {
     background-color: var(--bg-alt);
-    border-radius: 40px; /* Big subtle curves */
-    margin: 40px 20px;
-    box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.5);
 }
 
 .section-label {
     display: inline-block;
-    font-size: 1.4rem; /* Larger English */
+    font-size: 1rem;
     color: var(--accent);
-    margin-bottom: 20px;
-    letter-spacing: 0.15em;
+    margin-bottom: 30px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-weight: 800; /* Bolder contrast */
+    font-weight: 400;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
 }
 
 .section-title {
-    font-size: 2.8rem;
-    margin-bottom: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 300;
+    letter-spacing: 0.1em;
 }
 
 .section-content {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
     max-width: 800px;
-}
-
-/* 
-  Profile Layout
-*/
-.profile-layout {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-.profile-image-container {
-    flex-shrink: 0;
-    width: 250px;
-    height: 250px;
-    border-radius: 40px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px -10px rgba(249, 115, 22, 0.15);
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--border-color);
-}
-
-.orange-svg {
-    width: 80%;
-    height: 80%;
-    display: block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.profile-image-container:hover .orange-svg {
-    transform: scale(1.05) rotate(5deg);
-}
-
-.highlight-text {
-    position: relative;
-    z-index: 1;
-    font-size: 1.3em;
-    color: var(--accent);
-}
-
-.highlight-text::after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background-color: var(--accent-light);
-    z-index: -1;
-    border-radius: 4px;
 }
 
 /* 
   Hero Element
 */
 .hero {
-    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Stylish futuristic CSS gradients instead of image */
-    background: radial-gradient(circle at 80% 20%, rgba(255, 237, 213, 0.8) 0%, transparent 40%),
-                radial-gradient(circle at 10% 80%, rgba(253, 246, 240, 1) 0%, transparent 50%),
-                linear-gradient(135deg, #FAFAFA 0%, #FAFAFA 100%);
+    /* Main Hero Photo */
+    background-image: url('./photo.jpg');
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    overflow: hidden;
-}
-
-/* Sleek modern geometric mesh via CSS */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(rgba(249, 115, 22, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(249, 115, 22, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    z-index: 0;
 }
 
 .hero-overlay {
@@ -176,8 +106,8 @@ h1, h2, h3, h4, strong {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Gradient overlay for text readability */
-    background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(250,250,250,1) 100%);
+    background: rgba(250, 250, 250, 0.4);
+    backdrop-filter: blur(2px);
     z-index: 1;
 }
 
@@ -186,23 +116,92 @@ h1, h2, h3, h4, strong {
     z-index: 2;
 }
 
-/* Sharp contrast on English Hero Title */
 .hero-title {
-    font-size: 10vw; /* Massive responsive size */
-    font-weight: 800; /* Extra bold */
-    letter-spacing: -0.02em;
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
     margin-bottom: 20px;
     text-transform: uppercase;
     color: var(--text-primary);
-    line-height: 0.9;
 }
 
 .hero-subtitle {
-    font-size: 1.8rem;
-    color: var(--accent);
-    letter-spacing: 0.2em;
-    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    letter-spacing: 0.3em;
+    font-weight: 400;
     text-transform: uppercase;
+}
+
+/* 
+  Photo Background Sections (For AI & Me, and My Curiosity)
+*/
+.bg-photo {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #FFF; /* Make text inside the container pop */
+}
+
+/* Specific Photos */
+.bg-photo-ai {
+    background-image: url('./photo2.jpg');
+}
+
+.bg-photo-hobby {
+    background-image: url('./photo3.jpg');
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* Darken the image so floating white boxes stand out clearly */
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.floating-container {
+    position: relative;
+    z-index: 2;
+}
+
+.floating-container .section-label {
+    color: rgba(255,255,255,0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.floating-container .section-title {
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* 
+  Floating Text Boxes
+*/
+.floating-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px; /* Rounded corners as requested */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    color: var(--text-primary);
+    border: 1px solid rgba(255,255,255,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.floating-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.floating-box p {
+    color: var(--text-secondary);
+}
+
+.large-box {
+    padding: 60px;
+    max-width: 800px;
 }
 
 /* 
@@ -210,132 +209,97 @@ h1, h2, h3, h4, strong {
 */
 .grid-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    /* Automatically fit standard or 3 columns cleanly */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
-.card {
-    background-color: #FFFFFF;
-    padding: 50px;
-    border-radius: 30px; /* Soft rounding */
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Glass edge feel */
-    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.card:hover {
-    transform: translateY(-15px) scale(1.03);
-    box-shadow: 0 30px 60px -15px rgba(249, 115, 22, 0.15); /* Warmer stronger shadow */
-}
-
-.card h3 {
-    font-size: 1.6rem;
+.card-title {
+    font-size: 1.25rem;
     margin-bottom: 20px;
     color: var(--text-primary);
-    font-weight: 700;
+    font-weight: 500;
+    border-left: 3px solid var(--text-primary);
+    padding-left: 15px;
 }
 
 /* 
   Typography Utilities
 */
 .large-text {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.6;
     color: var(--text-primary);
     margin-bottom: 30px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
 }
 
 .sub-text {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
-    line-height: 2;
 }
 
 /* 
   Footer
 */
 .footer {
-    padding: 80px 0;
+    padding: 60px 0;
     text-align: center;
-    background-color: var(--text-primary);
-    color: #FFFFFF;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
 }
 
 .footer p {
-    font-size: 1rem;
-    letter-spacing: 0.15em;
-    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
     text-transform: uppercase;
-    font-weight: 500;
 }
 
 /* 
-  Dynamic Scroll Animation
+  Simple Elegant Scroll Animation
 */
 .reveal {
     opacity: 0;
-    transform: translateY(100px) scale(0.9);
-    filter: blur(8px);
-    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
+    transform: translateY(0);
 }
 
 /* 
   Responsive Design
 */
-@media (max-width: 900px) {
-    .profile-layout {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-}
-
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     .section {
         padding: 80px 0;
     }
     
-    .bg-alt {
-        margin: 20px 10px;
-        border-radius: 20px;
-    }
-
     .section-title {
-        font-size: 2.2rem;
-    }
-
-    .grid-layout {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        font-size: 2rem;
     }
     
     .large-text {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .desktop-only {
         display: none;
     }
     
-    .card {
-        padding: 40px 30px;
+    .floating-box, .large-box {
+        padding: 30px 20px;
     }
 }

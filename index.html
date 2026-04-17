@@ -7,16 +7,16 @@
     <!-- Google Fonts: Inter & Noto Sans JP for sharp, sophisticated typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero section">
         <div class="hero-overlay"></div>
         <div class="container reveal">
-            <h1 class="hero-title">MANDARINA</h1>
+            <h1 class="hero-title">Mandarina</h1>
             <p class="hero-subtitle">Exploring World Culture & AI</p>
         </div>
     </header>
@@ -25,52 +25,39 @@
     <main>
         
         <section class="section">
-            <div class="container">
-                <span class="section-label reveal">01. Profile</span>
-                <h2 class="section-title reveal" style="transition-delay: 0.1s">世界の文化への探求</h2>
-                
-                <div class="profile-layout reveal" style="transition-delay: 0.2s">
-                    <div class="profile-image-container">
-                        <svg viewBox="0 0 100 100" class="orange-svg" aria-label="Geometric Orange Mark">
-                            <defs>
-                                <linearGradient id="orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#FFB067" />
-                                    <stop offset="100%" stop-color="#F97316" />
-                                </linearGradient>
-                                <linearGradient id="leaf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#A7F3D0" />
-                                    <stop offset="100%" stop-color="#10B981" />
-                                </linearGradient>
-                            </defs>
-                            <circle cx="50" cy="55" r="35" fill="url(#orange-grad)" />
-                            <path d="M50 20 Q 65 5, 80 15 Q 70 30, 50 20 Z" fill="url(#leaf-grad)" />
-                            <!-- Geometric lines inside the circle for a sharp/modern feel -->
-                            <circle cx="50" cy="55" r="25" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 4" />
-                            <circle cx="50" cy="55" r="15" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3" />
-                        </svg>
-                    </div>
-                    <div class="section-content">
-                        <p>はじめまして、マンダリーナです。<br>
-                        私の最も興味を持っていることは<strong class="highlight-text">「世界の文化」</strong>です。<br>
-                        多様な価値観や歴史的背景に触れることで、新しい視点を得ることに喜びを感じています。</p>
-                    </div>
+            <div class="container reveal">
+                <span class="section-label">01. Profile</span>
+                <h2 class="section-title">世界の文化への探求</h2>
+                <div class="section-content">
+                    <p class="large-text">はじめまして、マンダリーナです。</p>
+                    <p>私の最も興味を持っていることは<strong>「世界の文化」</strong>です。<br>
+                    多様な価値観や歴史的背景に触れることで、新しい視点を得ることに喜びを感じています。</p>
                 </div>
             </div>
         </section>
 
-        <section class="section bg-alt">
-            <div class="container">
-                <span class="section-label reveal">02. AI & Me</span>
-                <h2 class="section-title reveal" style="transition-delay: 0.1s">AIという存在</h2>
+        <!-- Section 02: AI & Me (Photo Background 1) -->
+        <section class="section bg-photo bg-photo-ai">
+            <div class="bg-overlay"></div>
+            <div class="container reveal floating-container">
+                <span class="section-label">02. AI & Me</span>
+                <h2 class="section-title">AIという存在</h2>
                 <div class="section-content">
                     <div class="grid-layout">
-                        <div class="grid-item card reveal" style="transition-delay: 0.2s">
-                            <h3>知識が豊富な長老</h3>
-                            <p>私にとってAIは、<strong>「知識が豊富な長老」</strong>のような存在です。膨大な情報の中から的確な知恵を授けてくれる、人間社会における「生きる辞書」として捉えています。</p>
+                        <!-- Card 1 -->
+                        <div class="grid-item card floating-box">
+                            <h3 class="card-title">知識の集合体</h3>
+                            <p>膨大な情報をもとに、必要な知識や答えを引き出してくれる存在で、人間にとっての辞書のような役割を持つ。</p>
                         </div>
-                        <div class="grid-item card reveal" style="transition-delay: 0.3s">
-                            <h3>頼れるメンター</h3>
-                            <p>今後は、単なるツールとしてではなく、一緒に思考を深め、自分を導いてくれる<strong>「頼れるメンター」</strong>のような存在として、真摯に向き合っていきたいと考えています。</p>
+                        <!-- Card 2 -->
+                        <div class="grid-item card floating-box">
+                            <h3 class="card-title">思考を支えるパートナー</h3>
+                            <p>対話を通じて考えを整理し、判断や発想を助ける。メンターのように人を導く存在でもある。</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="grid-item card floating-box">
+                            <h3 class="card-title">未来のリスクを含む存在</h3>
+                            <p>SFのように、人間の幸福を追求する過程で管理や制御が強まり、望まない社会になる可能性もある。どのような未来になるかは未知数である。</p>
                         </div>
                     </div>
                 </div>
@@ -78,10 +65,10 @@
         </section>
 
         <section class="section">
-            <div class="container">
-                <span class="section-label reveal">03. Project Vision</span>
-                <h2 class="section-title reveal" style="transition-delay: 0.1s">この授業での挑戦</h2>
-                <div class="section-content reveal" style="transition-delay: 0.2s">
+            <div class="container reveal">
+                <span class="section-label">03. Project Vision</span>
+                <h2 class="section-title">この授業での挑戦</h2>
+                <div class="section-content">
                     <p class="large-text">
                         日常生活をサポートしながら、<br class="desktop-only">
                         生活に広がりができるようなアプリを作りたい。
@@ -93,11 +80,32 @@
             </div>
         </section>
 
+        <!-- Section 04: Curiosity (Photo Background 2) -->
+        <section class="section bg-photo bg-photo-hobby">
+            <div class="bg-overlay"></div>
+            <div class="container reveal floating-container">
+                <span class="section-label">04. My Curiosity</span>
+                <h2 class="section-title">布を巡る旅とモノづくり</h2>
+                <div class="section-content">
+                    <div class="floating-box large-box">
+                        <p class="large-text">
+                            世界を旅し、その土地に息づく布を集めること。
+                        </p>
+                        <p class="sub-text">
+                            私にとっての大きな好奇心は「世界の布」にあります。<br>
+                            世界中や日本各地を訪れて出会った美しいテキスタイルを集め、それらから得たインスピレーションをもとに、ポーチやオリジナルのパンツ（ハカマパンツやミャンマーパンツ）などを制作しています。<br><br>
+                            旅を通じて布の背景にある文化や物語に触れ、それを自分の手で形にしていく過程が、私にとって何よりの喜びです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
         <div class="container reveal">
-            <p>&copy; 2026 MANDARINA. All rights reserved.</p>
+            <p>&copy; 2026 Mandarina. All rights reserved.</p>
         </div>
     </footer>
 
