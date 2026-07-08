@@ -8,6 +8,21 @@ body, input, select, textarea {
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
+#header .content .inner h1 .subtitle {
+	display: block;
+	font-size: 0.4em;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	margin-top: 0.5em;
+}
+
+/* Sub-headings inside a section body (e.g. AI & ME's 3 points) */
+#main article h4 {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 1rem;
+	margin-bottom: 0.5em;
+}
+
 /* Banner images used as links (sections 3-5) */
 #main article > a {
 	display: block;
