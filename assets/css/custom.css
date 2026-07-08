@@ -1,0 +1,34 @@
+/* Custom overrides on top of Dimension's main.css */
+
+body, input, select, textarea {
+	font-family: 'Noto Sans JP', "Zen Kaku Gothic New", sans-serif;
+}
+
+#header .content .inner h1 {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Banner images used as links (sections 3-5) */
+#main article > a {
+	display: block;
+	text-decoration: none;
+}
+
+#main article > a .image.main {
+	cursor: pointer;
+}
+
+/* Small-font sub links under the main action button */
+#main article .sub-link {
+	font-size: 0.8em;
+	margin-top: -1em;
+}
+
+#main article .sub-link a {
+	border-bottom-color: transparent;
+	opacity: 0.75;
+}
+
+#main article .sub-link a:hover {
+	opacity: 1;
+}
